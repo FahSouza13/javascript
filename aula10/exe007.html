@@ -20,19 +20,19 @@
 </head>
 <body>
     <h1>Somando valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn1" id="txtn1"> + <!--o input cria uma caixa PARA ADICIONAR ELEMENTO DO TIPO NÚMERO-->
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="somar" onclick="somar()"><!--input cria uma caixa do tipo botão com o nome(value) somar e aqui ja chamamos o evento de soma do js através do evento de click-->
     <div id="res">O Resultado vai aparecer aqui...</div>
     <script>
         function somar() {
-            var tn1 = window.document.getElementById('txtn1')
+            var tn1 = window.document.getElementById('txtn1') //var tn1 ta recebendo o valor digitado pelo usuário
             var tn2 = window.document.querySelector('input#txtn2')
-            var res = window.document.getElementById('res')
-            var n1 = Number(tn1.value)
+            var res = window.document.getElementById('res') //variavel res ta recebendo o html atraves da função getElementById atraves do Id'res'
+            var n1 = Number(tn1.value) //var n1 ta convertendo para numero a var tn1 digitada pelo usuario para que seja possivel fazer a soma
             var n2 = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `O resultado é <strong>${s}</strong>.`
+            res.innerHTML = `O resultado é <strong>${s}</strong>.` //o innerHtml TA TROCANDO a frase do Id'res' atual pela frase com o resultado da soma
         }
     </script>
 </body>
