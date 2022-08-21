@@ -21,13 +21,15 @@
             var resid = (txt.value) //a var resid foi criada para receber o valor da var txt(que tem o resultado html do usuario) e esta sendo executada agr dentro do JS
             if (resid == 'brasil') {
                 resultado.innerHTML = `Você é Brasileiro`
-            }else {
-                resultado.innerHTML = `Você é Estrangeiro`
-            }
-            if (resid == 'Brasil') {
+            } else {
+                 if (resid == 'Brasil') {
                 resultado.innerHTML = `Você é Brasileiro`
-            }
+                } else {
+                    resultado.innerHTML = `Você é Estrangeiro`
+                }
+
         }
+    }
     </script>
 </body>
 </html>
