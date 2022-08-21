@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    País onde vive: <input type="text" name="residencia" id="residencia">
+    <input type="button" value="ir" onclick="verificar()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var txt = document.getElementById('residencia') //a var txt foi criada para puxar o resultado HTML inserida pelo usuario
+            var resultado = document.querySelector('div#resultado') //a var resultado foi criada para aparecer o resultado da nacionalidade após a verificação pela função
+            var resid = (txt.value) //a var resid foi criada para receber o valor da var txt(que tem o resultado html do usuario) e esta sendo executada agr dentro do JS
+            if (resid == 'brasil') {
+                resultado.innerHTML = `Você é Brasileiro`
+            }else {
+                resultado.innerHTML = `Você é Estrangeiro`
+            }
+            if (resid == 'Brasil') {
+                resultado.innerHTML = `Você é Brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>
